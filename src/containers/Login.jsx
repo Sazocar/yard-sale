@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="form-container">
-        <img src="/logos/logo_yard_sale.svg" alt="logo" className="logo" />
+        {/* <img src="/logos/logo_yard_sale.svg" alt="logo" className="logo" /> */}
 
         <form action="#" className="form">
           <label for="email" className="label">
