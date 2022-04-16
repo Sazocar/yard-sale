@@ -19,7 +19,7 @@ const App = () => {
             path="/recovery-password"
             element={<RecoveryPassword />}
           />
-          <Route element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </BrowserRouter>
