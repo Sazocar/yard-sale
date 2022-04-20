@@ -1,13 +1,18 @@
 import React from "react";
-import '../styles/Header.scss';
+import '@styles/Header.scss';
+
+import menu from '@icons/icon_menu.svg';
+import logo from '@logos/logo_yard_sale.svg';
+import flechita from '@icons/flechita.svg';
+import shoppingCart from '@icons/icon_shopping_cart_notification.svg';
 
 const Header = () => {
   return (
     <nav>
-      <img src="./icons/icon_menu.svg" alt="" className="menu" />
+      <img src={menu} alt="" className="menu" />
 
       <div className="navbar-left">
-        <img src="./logos/logo_yard_sale.svg" alt="" className="logo" />
+        <img src= {logo} alt="" className="nav-logo" />
 
         <ul>
           <li>
@@ -34,10 +39,10 @@ const Header = () => {
       <div className="navbar-right">
         <ul>
           <li>camilayooko@gmail.com</li>{" "}
-          <img src="./icons/flechita.svg" alt="" className="flechita" />
+          <img src={flechita}  alt="" className="flechita" />
           <li>
             <img
-              src="./icons/icon_shopping_cart_notification.svg"
+              src={shoppingCart}
               alt=""
               className="navbar-shopping-cart"
             />
