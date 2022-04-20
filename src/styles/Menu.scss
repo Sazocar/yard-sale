@@ -1,0 +1,33 @@
+.Menu {
+	width: 125px;
+	height: auto;
+	border: 1px solid var(--very-light-pink);
+	border-radius: 6px;
+	padding: 20px 20px 0px 20px;
+}
+
+.Menu ul {
+	list-style: none;
+	padding: 0;
+}
+
+.Menu ul li {
+	text-align: end;
+	margin-bottom: 32px;
+}
+
+.Menu ul li:last-child {
+	border-top: 1px solid var(--text-input-field);
+	margin-bottom: 26px;
+	padding-top: 25px;
+}
+
+.Menu ul li a {
+	font-weight: bold;
+	color: var(--black);
+	text-decoration: none;
+}
+
+.Menu ul li:last-child a {
+	color: var(--hospital-green);
+}

@@ -1,0 +1,34 @@
+import React from "react";
+import { OrderItem } from "../components/OrderItem";
+import { Menu } from "../components/Menu";
+import { Order } from "../components/Order";
+import "../styles/Checkout.scss";
+
+const Checkout = () => {
+  // const mystyle = {
+  //   backgroundColor: "#F7F7F7",
+  //   borderRadius: "8px",
+  //   padding: "0 16px 0",
+  //   height: "60px",
+  // };
+
+  return (
+    <div className="Checkout">
+      <div className="Checkout-container">
+        <h1 className="title">My order</h1>
+        <div className="Checkout-content">
+          <div class="my-order-content">
+            <p class="article-info">
+              <span>04.25.21</span>
+              <span>6 articles</span>
+            </p>
+            <p class="article-price">$ 560.00</p>
+          </div>
+        </div>
+        <OrderItem />
+      </div>
+    </div>
+  );
+};
+
+export { Checkout };

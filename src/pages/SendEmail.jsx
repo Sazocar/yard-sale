@@ -1,7 +1,7 @@
 import React from "react";
-import '../styles/RecoveryPassword.scss';
+import "../styles/SendEmail.scss";
 
-const RecoveryPassword = () => {
+const SendEmail = () => {
   return (
     <div className="login">
       <div className="form-container">
@@ -27,4 +27,4 @@ const RecoveryPassword = () => {
   );
 };
 
-export { RecoveryPassword };
+export { SendEmail };
