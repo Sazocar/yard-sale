@@ -1,10 +1,12 @@
 import React from "react";
-import '../styles/CreateAccount.scss';
+import { YardSaleLogo } from "../components/YardSaleLogo";
+import '@styles/CreateAccount.scss';
 
 const CreateAccount = () => {
   return (
     <div className="CreateAccount">
       <div className="CreateAccount-container">
+				<YardSaleLogo/>
         <h1 className="title">My account</h1>
 
         <form action="#" className="form">

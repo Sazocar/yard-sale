@@ -1,57 +1,62 @@
-@import 'vars';
+@import "vars";
 
 .ProductItem {
-	width: 240px;
+  width: 240px;
 }
 
-.ProductItem img {
-	width: 240px;
-	height: 240px;
-	border-radius: 20px;
-	object-fit: cover;
+.Item-image {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
 .ProductItem-info {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
 }
 
 .ProductItem-info figure {
-	margin: 0;
+  margin: 0;
 }
 
-.ProductItem-info figure img {
-	width: 35px;
-	height: 35px;
+.addToCart-image {
+  width: 35px;
+  height: 35px;
+	cursor: pointer;
 }
 
 .ProductItem-info div p:nth-child(1) {
-	font-weight: bold;
-	font-size: var(--md);
-	margin-top: 0;
-	margin-bottom: 4px;
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 
 .ProductItem-info div p:nth-child(2) {
-	font-size: var(--sm);
-	margin-top: 0;
-	margin-bottom: 0;
-	color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--very-light-pink);
 }
 
 @media (max-width: 640px) {
-	.cards-container {
-		grid-template-columns: repeat(auto-fill, 140px);
-	}
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
 
-	.ProductItem {
-		width: 140px;
-	}
+  .ProductItem {
+    width: 140px;
+  }
 
-	.ProductItem img {
-		width: 140px;
-		height: 140px;
-	}
+  .Item-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .addToCart-image {
+    width: 30px;
+  }
 }

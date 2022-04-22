@@ -66,6 +66,10 @@ nav li {
   font-size: var(--sm);
 }
 
+.navbar-right-email {
+	cursor: pointer;
+}
+
 .navbar-right .flechita {
   transform: rotate(90deg);
   margin-left: -4px;

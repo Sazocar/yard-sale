@@ -1,17 +1,10 @@
 import React from "react";
-import { OrderItem } from "../components/OrderItem";
-import { Menu } from "../components/Menu";
-import { Order } from "../components/Order";
-import "../styles/Checkout.scss";
+import { OrderItem } from "@components/OrderItem";
+import { Menu } from "@components/Menu";
+import { Order } from "@components/Order";
+import "@styles/Checkout.scss";
 
 const Checkout = () => {
-  // const mystyle = {
-  //   backgroundColor: "#F7F7F7",
-  //   borderRadius: "8px",
-  //   padding: "0 16px 0",
-  //   height: "60px",
-  // };
-
   return (
     <div className="Checkout">
       <div className="Checkout-container">

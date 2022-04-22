@@ -1,0 +1,12 @@
+.YardSaleLogo {
+	width: 180px;
+	margin: 48px 0px;
+	justify-self: center;
+	display: none;
+}
+
+@media (max-width: 640px) {
+	.YardSaleLogo {
+		display: block;
+	}
+}
