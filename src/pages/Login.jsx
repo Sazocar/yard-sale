@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import { YardSaleLogo } from "../components/YardSaleLogo";
 import "@styles/Login.scss";
 
 const Login = () => {
+	const form = useRef(null);
+
+	const handleSubmit = (event) => {
+		const formData = new FormData(form.current);
+		const data = {
+			email: formData.get('email'),
+			password: formData.get('password')
+		};
+		console.log(data);
+		event.preventDefault();
+	};
+
   return (
     <div className="Login">
       <div className="Login-container">
-        <YardSaleLogo/>
-        <form action="/" className="form">
+        <YardSaleLogo />
+        <form action="/" className="form" ref={form}>
           <label htmlFor="email" className="label">
             Email address
           </label>
           <input
             type="text"
-            id="email"
+            name="email"
             placeholder="platzi@example.cm"
             className="input input-email"
           />
@@ -22,15 +34,17 @@ const Login = () => {
           </label>
           <input
             type="password"
-            id="password"
+            name="password"
             placeholder="*********"
             className="input input-password"
           />
-          <input
+          <button
             type="submit"
-            value="Log in"
+            onClick={handleSubmit}
             className="primary-button login-button"
-          />
+          >
+            Login
+          </button>
           <a href="/">Forgot my password</a>
         </form>
         <button className="secondary-button signup-button">Sign up</button>

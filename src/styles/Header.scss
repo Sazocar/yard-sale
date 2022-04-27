@@ -67,7 +67,7 @@ nav li {
 }
 
 .navbar-right-email {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .navbar-right .flechita {
@@ -78,6 +78,15 @@ nav li {
   position: relative;
   width: 30px;
   height: 30px;
+}
+
+.cartItems {
+  position: absolute;
+  top: 6px;
+  right: 58px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 @media (max-width: 640px) {
