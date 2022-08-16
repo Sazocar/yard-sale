@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {OrderItem} from "@components/OrderItem";
 import {AppContext} from "../context/AppContext";
 import "@styles/MyOrder.scss";
@@ -6,6 +6,16 @@ import arrow from "@icons/flechita.svg";
 
 const MyOrder = () => {
   const { state } = useContext(AppContext);
+
+ const getTotal = () => {
+   const initialValue = 0;
+   const sumTotal = state.cart.reduce(
+     (previousValue,
+     currentValue) => previousValue + currentValue.price, initialValue
+   );
+   return sumTotal
+ }
+
   return (
     <aside className="MyOrder">
       <div className="title-container">
@@ -20,7 +30,7 @@ const MyOrder = () => {
           <p>
             <span>Total</span>
           </p>
-          <p>$560.00</p>
+          <p>$ {getTotal()}</p>
         </div>
         <button className="primary-button">Checkout</button>
       </div>
