@@ -25,12 +25,9 @@
 .my-order-content {
 	width: 300px;
 	border-radius: 8px;
-	background-color: var(--text-input-field);
-	padding: 0 16px 0;
 	display: flex;
+  flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
-	height: 60px;
 	margin-bottom: 28px;
 }
 

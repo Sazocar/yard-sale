@@ -14,6 +14,7 @@ import { NotFound } from "../pages/NotFound";
 import { AppContext } from "../context/AppContext";
 import { useInitialState } from "../hooks/useInitialState";
 import "@styles/global.css";
+import { MyOrder } from "../containers/MyOrder";
 
 const App = () => {
   const initialState = useInitialState();
@@ -31,7 +32,7 @@ const App = () => {
           <Route exact path="/account" element={<MyAccount />} />
           <Route exact path="/signup" element={<CreateAccount />} />
           <Route exact path="/checkout" element={<Checkout />} />
-          <Route exact path="/orders" element={<Orders />} />
+          <Route exact path="/orders" element={<MyOrder />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

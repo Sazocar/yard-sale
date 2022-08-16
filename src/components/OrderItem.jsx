@@ -1,7 +1,6 @@
 import React from "react";
 import "@styles/OrderItem.scss";
-
-import close from '@icons/icon_close.png';
+import close from "@icons/icon_close.png";
 
 const OrderItem = () => {
   return (
@@ -13,10 +12,10 @@ const OrderItem = () => {
         />
       </figure>
       <p>Bike</p>
-      <p>$ 30,00</p>
+      <p>$30,00</p>
       <img src={close} alt="close" />
     </div>
   );
 };
 
-export { OrderItem };
+export {OrderItem};

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Menu } from "./Menu";
 import { AppContext } from "../context/AppContext";
+import { MyOrder } from '../containers/MyOrder';
 import '@styles/Header.scss';
 
 import menu from '@icons/icon_menu.svg';
@@ -9,11 +10,12 @@ import flechita from '@icons/flechita.svg';
 import shoppingCart from '@icons/icon_shopping_cart_notification.svg';
 
 const Header = () => {
-	const [ toggle, setToggle ] = useState(false);
+	const [ toggleMenu, setToggleMenu ] = useState(false);
+  const [ toggleOrders, setToggleOrders] = useState(false);
   const { state } = useContext(AppContext);
 
-	const handleToggle = () => {
-		setToggle(!toggle);
+	const handleToggleMenu = () => {
+		setToggleMenu(!toggleMenu);
 	};
 
   return (
@@ -46,18 +48,29 @@ const Header = () => {
       </div>
 
       <div className="navbar-right">
-        <ul>
-          <li className="navbar-right-email" onClick={handleToggle}>
+        <ul onClick={handleToggleMenu}>
+          <li className="navbar-right-email" onClick={handleToggleMenu}>
             camilayooko@gmail.com
           </li>
-          <img src={flechita} alt="" className="flechita" />
-          <li>
-            <img src={shoppingCart} className="navbar-shopping-cart" />
-            {state.cart.length > 0 ? <p className="cartItems">{state.cart.length}</p> : null}
+          <img
+            src={flechita}
+            alt=""
+            className="flechita"
+            onClick={handleToggleMenu}
+          />
+          <li
+            className="navbar-shopping-cart"
+            onClick={() => setToggleOrders(!toggleOrders)}
+          >
+            <img src={shoppingCart} className="navbar-shopping-cart-img" />
+            {state.cart.length > 0 ? (
+              <p className="cartItems">{state.cart.length}</p>
+            ) : null}
           </li>
         </ul>
       </div>
-      {toggle ? <Menu /> : null}
+      {toggleMenu ? <Menu /> : null}
+      {toggleOrders ? <MyOrder /> : null}
     </nav>
   );
 };
