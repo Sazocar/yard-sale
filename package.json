@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "React.js project from a Platzi Course",
   "main": "src/index.js",
+  "homepage": "https://sazocar.github.io/yard-sale/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.50.0",
     "sass-loader": "^12.6.0",
